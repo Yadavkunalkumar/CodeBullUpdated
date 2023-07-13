@@ -85,12 +85,14 @@ public class Driver {
             env = "UAT";
         } else if (env.equalsIgnoreCase("prod")) {
             env = "PROD";
+        } else {
+            env = "SIT";
         }
 
     }
 
     /**
-     * @param browser
+     * @param browser THE browser
      */
     private static void startBrowser(String browser) {
 

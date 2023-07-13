@@ -52,5 +52,21 @@ public class Loginpage extends BasePage {
 
         click(LoginpageElement.loginBtn);
     }
+    /**
+     * This method is used to check if invalid msg is present or not
+     */
+    public Boolean isInvalidMsgVisible() throws InterruptedException {
+        hardWait(1);
+        return isDisplayed(LoginpageElement.invalidMsg);
+    }
+
+    /**
+     * This method is used to get invalid msg text
+     *
+     * @return the text
+     */
+    public String getInvalidMsg() {
+        return getText(LoginpageElement.invalidMsg);
+    }
 }
 

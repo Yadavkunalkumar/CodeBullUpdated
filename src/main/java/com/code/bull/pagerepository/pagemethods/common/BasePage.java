@@ -63,10 +63,38 @@ public class BasePage extends Driver {
 
         return driver.findElement(elementLocation).isDisplayed();
     }
+    /**
+     * This method is used for hard wait
+     *
+     * @param time the time for wait
+     * @throws InterruptedException the exception
+     */
+
     public void hardWait(int time) throws InterruptedException {
         time = time * 1000;
         Thread.sleep(time);
     }
+    /**
+     * This method is used to get the text
+     *
+     * @param elementLocation the weblement location
+     * @return the text
+     */
+    public String getText(By elementLocation) {
+        return driver.findElements(elementLocation).get(0).getText();
+    }
+
+    /**
+     * This method is used to get the attribute
+     *
+     * @param elementLocation the webelement
+     * @param attributeName   the attribute name
+     * @return the attribute
+     */
+    public String getAttribute(By elementLocation, String attributeName) {
+        return driver.findElements(elementLocation).get(0).getAttribute(attributeName);
+    }
+
 }
 
 
